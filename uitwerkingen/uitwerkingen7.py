@@ -9,14 +9,19 @@ dobbelsteen2 = [1, 2, 3, 4, 5, 6]
 
 # Deze uitwerking werkt zelfs als de dobbelsteen2 lijst verandert.
 # Als je de combinaties hardcoded heb gecodeerd dan faalt de uitwerking bij het veranderen van de dobbelsteen2 lijst
-sevensAantal = 0
-for waarde1 in dobbelsteen1:
-    for waarde2 in dobbelsteen2:
-        if waarde1 + waarde2 == 7:
-            sevensAantal += 1
-print(sevensAantal)
+def berekenSevens():
+    sevensAantal = 0
+    for waarde1 in dobbelsteen1:
+        for waarde2 in dobbelsteen2:
+            if waarde1 + waarde2 == 7:
+                sevensAantal += 1
+    return sevensAantal
+
+print(berekenSevens())
 
 dobbelsteen2 = [0, 2, 3, 4, 5, 7]
 
 # Wat als de waardes op de tweede dobbelsteen veranderen?
 # Werkt de code die je hebt geschreven voor de normale dobbelstenen nog steeds?
+
+print(berekenSevens())
